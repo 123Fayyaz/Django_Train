@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Fare</title>
+</head>
+<body>
+<!--<form>-->
+<!--        Train No: <input type="text" name="" value="">-->
+<!--    <br><br>-->
+
+<!--    Orginate Place: <input type="text" name="" value="">-->
+<!--    <br><br>-->
+<!--    Destination Place: <input type="text" name="" value="">-->
+<!--    <br><br>-->
+<!--        Departure Time: <input type="text" name="" value="">-->
+<!--    <br><br>-->
+<!--    Fare: <input type="text" name="" value="">-->
+
+<!--    </form>-->
+<form method="post">
+      <h2>Please enter the train fares in this page</h2>
+      {{form.as_p}}
+      {%csrf_token%}
+      <button type="button" name="button">Submit</button>
+  </form>
+</body>
+</html>

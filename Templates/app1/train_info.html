@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Info</title>
+</head>
+<body>
+<h1>Train Information</h1>
+  <div class="info">
+      {%if insert_train_details %}
+
+    <table border="2px solid black">
+      <tr>
+        <th>Train Num</th>
+        <th>Train Name</th>
+        <th>Departure Place</th>
+        <th>Destination Place</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+      </tr>
+      {%for x in insert_train_details%}
+      <tr>
+        <td>{{x.num}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.departure_place}}</td>
+        <td>{{x.arrival_place}}</td>
+        <td>{{x.departure_time}}</td>
+        <td>{{x.arrival_time}}</td>
+      </tr>
+      {% endfor%}
+    </table>
+    {% else %}
+    <h4>--!No train records found!--</h4>
+    {% endif%}
+    </div>
+
+  <div class="list">
+      <h2>Train details in list</h2>
+      {% if insert_train_details%}
+      <ol>
+        {%for x in insert_train_details%}
+        <li>Train num:{{x.num}}</li>+
+
+        <ul>
+
+        <li>Train name:{{x.name}}</li>
+        <li>Departure Place:{{x.departure_place}}</li>
+        <li>Arrival Place:{{x.arrival_place}}</li>
+        <li>Departure Time:{{x.departure_time}}</li>
+        <li>Arrival Time:{{x.arrival_time}}</li>
+        </ul>
+        {% endfor%}
+      </ol>
+      {% else %}
+      <h4>--!No train records found!--</h4>
+      {% endif%}
+
+    </div>
+
+</body>
+</html>

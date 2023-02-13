@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Details</title>
+</head>
+<body>
+<h1>Train Details</h1>
+<form>
+        Train No: <input type="text" name="" value="">
+    <br><br>
+    Train Name: <input type="text" name="" value="">
+    <br><br>
+    Departure Place: <input type="text" name="" value="">
+    <br><br>
+    Destination: <input type="text" name="" value="">
+    <br><br>
+        Departure Time: <input type="text" name="" value="">
+    <br><br>
+    Arrival Time: <input type="text" name="" value="">
+    <br><br>
+    <button type="button" name="button">Submit</button>
+    </form>
+<br><hr>
+<form  method="post">
+    <h2>The below form is form Django forms</h2>
+    {{form_d.as_p}}
+    {%csrf_token%}
+    <button type="button" name="button">Submit</button>
+  </form>
+</body>
+</html>
